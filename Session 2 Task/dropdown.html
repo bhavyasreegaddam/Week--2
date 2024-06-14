@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Column Layout with Dropdown</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 25%;
+            float: left;
+            background-color: #f4f4f4;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .main-content {
+            width: 75%;
+            float: left;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>I am from MITS College.</p>
+        </div>
+        <div class="main-content">
+            <h1>Main Content</h1>
+            <p>Madanapalle Institute Of Technology & Sciences</p>
+            <div class="dropdown">
+                <button>Social Media</button>
+                <div class="dropdown-content">
+                    <p>Instagram</p>
+                    <p>Linkedin</p>
+                    <p>Youtube</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
